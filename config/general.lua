@@ -90,8 +90,8 @@ game.menuEntries["general"] = {
         icon = 'water',
         onEvent = "banhorio:ok",
         isEnabled = function(  )
-            local playerBusy = exports.manager_small_resources:playerBusy()
-            local playerInWater = exports.manager_small_resources:playerInWater()
+            local playerBusy = exports.frp_manager_snippets:playerBusy()
+            local playerInWater = exports.frp_manager_snippets:playerInWater()
 
             return not playerBusy and playerInWater
         end
@@ -102,8 +102,8 @@ game.menuEntries["general"] = {
         icon = 'water',
         onEvent = "drp:rio",
         isEnabled = function( )
-            local playerBusy = exports.manager_small_resources:playerBusy()
-            local playerInWater = exports.manager_small_resources:playerInWater()
+            local playerBusy = exports.frp_manager_snippets:playerBusy()
+            local playerInWater = exports.frp_manager_snippets:playerInWater()
 
             return not playerBusy and playerInWater
         end
