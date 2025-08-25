@@ -66,33 +66,12 @@ game.menuEntries["general"] = {
         end
     },
     {
-        id = 'crafting_recipes',
-        label = _t("crafting_recipes"),
-        icon = 'clipboard',
-        onEvent = 'open_crafting_food_menu',
-        isEnabled = function( pEntity )
-            local closest = Property.closestProperty() and Property.isPropertyOwner()
-            local hasPerm = Business.hasClassePermission("saloon") or Business.hasClassePermission("bar")
-            return (closest ~= nil and closest) and hasPerm
-        end
-    },
-    {
         id = 'drug:seller',
         label = _t("drug_sell"),
         icon = 'vial',
         onEvent = "drugs:client:cornerselling",
         isEnabled = function( pEntity )
             return hasDrugs()
-        end
-    },
-    {
-        id = 'house:mainmenu',
-        label = _t("properties"),
-        icon = 'house',
-        onEvent = "properties.managerProperty",
-        isEnabled = function( pEntity )
-            local closest = Property.closestProperty() and Property.isPropertyOwner()
-            return closest ~= nil and closest
         end
     },
     {
